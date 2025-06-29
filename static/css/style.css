@@ -1,0 +1,223 @@
+/* Custom styles for AgriTech Newsfeed */
+
+:root {
+    --primary-green: #198754;
+    --secondary-green: #20c997;
+    --dark-green: #146c43;
+    --light-green: #d1e7dd;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Navigation */
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: var(--light-green) !important;
+}
+
+/* Cards */
+.card {
+    border: none;
+    border-radius: 12px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1) !important;
+}
+
+.card-title a {
+    color: #212529;
+    transition: color 0.2s ease-in-out;
+}
+
+.card-title a:hover {
+    color: var(--primary-green);
+}
+
+/* Statistics Cards */
+.card.bg-primary, .card.bg-success, .card.bg-info, .card.bg-warning {
+    border-radius: 12px;
+    border: none;
+}
+
+/* Buttons */
+.btn-success {
+    background-color: var(--primary-green);
+    border-color: var(--primary-green);
+}
+
+.btn-success:hover {
+    background-color: var(--dark-green);
+    border-color: var(--dark-green);
+}
+
+.btn-outline-success {
+    color: var(--primary-green);
+    border-color: var(--primary-green);
+}
+
+.btn-outline-success:hover,
+.btn-outline-success.active {
+    background-color: var(--primary-green);
+    border-color: var(--primary-green);
+}
+
+/* Badges */
+.badge {
+    font-size: 0.75rem;
+    padding: 0.5em 0.75em;
+    border-radius: 6px;
+}
+
+.badge.bg-success {
+    background-color: var(--primary-green) !important;
+}
+
+/* Search Form */
+.form-control:focus {
+    border-color: var(--primary-green);
+    box-shadow: 0 0 0 0.2rem rgba(25, 135, 84, 0.25);
+}
+
+/* Footer */
+footer {
+    margin-top: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .display-5 {
+        font-size: 2rem;
+    }
+    
+    .btn-group {
+        flex-wrap: wrap;
+    }
+    
+    .btn-group .btn {
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* Loading Animation */
+.spinner-border.text-success {
+    color: var(--primary-green) !important;
+}
+
+/* Article Cards */
+.article-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.article-card .card-body {
+    flex: 1;
+}
+
+.article-card .card-footer {
+    background: transparent;
+    border-top: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+/* Keyword Tags */
+.badge.bg-light {
+    background-color: #e9ecef !important;
+    color: #495057 !important;
+    font-weight: 500;
+}
+
+/* Category Filter Buttons */
+.btn-group .btn {
+    border-radius: 6px;
+    margin-right: 0.25rem;
+}
+
+.btn-group .btn:last-child {
+    margin-right: 0;
+}
+
+/* Statistics Cards Icons */
+.card i.fa-2x {
+    opacity: 0.8;
+}
+
+/* Hover Effects */
+.card:hover .card-title a {
+    color: var(--primary-green);
+}
+
+/* Empty State */
+.text-center.py-5 i {
+    opacity: 0.3;
+}
+
+/* Modal */
+.modal-content {
+    border-radius: 12px;
+    border: none;
+}
+
+.modal-header {
+    border-bottom: 1px solid #dee2e6;
+    border-radius: 12px 12px 0 0;
+}
+
+/* Form Controls */
+.form-select:focus {
+    border-color: var(--primary-green);
+    box-shadow: 0 0 0 0.2rem rgba(25, 135, 84, 0.25);
+}
+
+/* Dropdown */
+.dropdown-menu {
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item:hover {
+    background-color: var(--light-green);
+    color: var(--dark-green);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-green);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--dark-green);
+}
+
+/* Print Styles */
+@media print {
+    .navbar, .btn, footer {
+        display: none !important;
+    }
+    
+    .card {
+        break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #dee2e6;
+    }
+} 
